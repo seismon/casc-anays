@@ -3,7 +3,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=200&section=header&text=CASC-ANAYS&fontSize=70&fontColor=A855F7&animation=fadeIn&fontAlignY=38&desc=v4.0%20%E2%80%94%20Global%20Analytical%20Complex&descAlignY=58&descSize=18&descColor=D8B4FE" width="100%"/>
 
 <a href="https://github.com/seismon/casc-anays">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=2500&pause=800&color=A855F7&center=true&vCenter=true&multiline=true&width=800&height=100&lines=Web+Reconnaissance+%7C+OSINT+%7C+Pentest;7+Analysis+Modules+%7C+40%2B+GitHub+Tools;HTML+%7C+JSON+%7C+CSV+%7C+Markdown+Reports" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=2500&pause=800&color=A855F7&center=true&vCenter=true&multiline=true&width=800&height=100&lines=Web+Recon+%7C+OSINT+%7C+Pentest+%7C+Bug+Bounty;Vulnerability+Scanner+%7C+Subdomain+Enumeration;7+Modules+%7C+40%2B+Tools+%7C+4+Report+Formats" alt="Typing SVG" />
 </a>
 
 <br>
@@ -16,6 +16,15 @@
 </a>
 <img src="https://img.shields.io/badge/Version-4.0.0-6C3CE1?style=for-the-badge&labelColor=1A1A2E" alt="Version">
 <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-A855F7?style=for-the-badge&labelColor=1A1A2E" alt="Platform">
+
+<br>
+
+<img src="https://img.shields.io/badge/Pentest_Tool-6C3CE1?style=flat-square&labelColor=1A1A2E" alt="Pentest">
+<img src="https://img.shields.io/badge/Vulnerability_Scanner-A855F7?style=flat-square&labelColor=1A1A2E" alt="Vuln Scanner">
+<img src="https://img.shields.io/badge/Web_Recon-8B5CF6?style=flat-square&labelColor=1A1A2E" alt="Web Recon">
+<img src="https://img.shields.io/badge/OSINT_Tool-D8B4FE?style=flat-square&labelColor=1A1A2E" alt="OSINT">
+<img src="https://img.shields.io/badge/Bug_Bounty-9333EA?style=flat-square&labelColor=1A1A2E" alt="Bug Bounty">
+<img src="https://img.shields.io/badge/Kali_Linux_Ready-7C3AED?style=flat-square&labelColor=1A1A2E" alt="Kali">
 
 <br>
 
@@ -34,17 +43,72 @@
 
 <br><br>
 
+<a href="https://t.me/cascadom">
+  <img src="https://img.shields.io/badge/Telegram-@cascadom-26A5E4?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1A1A2E" alt="Telegram">
+</a>
+
+<br><br>
+
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" height="3px" alt="divider">
 
 </div>
 
 <br>
 
+<h2 align="center">🌊 О Cascada Project</h2>
+
+<br>
+
+<div align="center">
+
+**CASC-ANAYS** — это инструмент проекта **Cascada Project** — сообщества по кибербезопасности<br>
+в Telegram-сегменте, посвящённого пентесту, OSINT, bug bounty и веб-безопасности.
+
+<br>
+
+<a href="https://t.me/cascadom">
+  <img src="https://img.shields.io/badge/🌊_Cascada_Project-Присоединиться_в_Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1A1A2E" alt="Cascada Project" height="40">
+</a>
+
+<br><br>
+
+**📢 Telegram-канал:** [@cascadom](https://t.me/cascadom)
+
+</div>
+
+<br>
+
+<div align="center">
+
+В канале **Cascada Project** вы найдёте:
+
+<br>
+
+```
+🔥  Инструменты для пентеста и OSINT
+🛠  Гайды по веб-безопасности и bug bounty
+💡  Свежие CVE и техники эксплуатации
+🐛  Методологии поиска уязвимостей
+🎓  Обучающие материалы по кибербезопасности
+👥  Сообщество единомышленников
+```
+
+</div>
+
+<br>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" height="3px" alt="divider">
+
+<br>
+
 <h2 align="center">💜 Что такое CASC-ANAYS?</h2>
 
+<br>
+
 <p align="center">
-  <b>CASC-ANAYS</b> — это модульный аналитический комплекс для пентеста и разведки веб-сайтов.<br>
-  Он объединяет <b>40 популярных GitHub-инструментов</b> и <b>7 собственных модулей</b><br>
+  <b>CASC-ANAYS</b> — это модульный <b>pentest toolkit</b> и <b>vulnerability scanner</b><br>
+  для <b>web reconnaissance</b>, <b>OSINT</b> и <b>bug bounty</b>.<br><br>
+  Он объединяет <b>40+ популярных GitHub-инструментов</b> и <b>7 собственных модулей</b><br>
   в единую CLI-систему с красивым выводом, интерактивным режимом<br>
   и генерацией отчётов в <b>4 форматах</b>.
 </p>
@@ -296,7 +360,7 @@ python3 casc_anays.py -t example.com --full --no-vuln
 
 <br>
 
-<h2 align="center">📦 40 GitHub-репозиториев</h2>
+<h2 align="center">📦 40+ GitHub-репозиториев</h2>
 
 <br>
 
@@ -559,7 +623,7 @@ python3 casc_anays.py --self-test
 ```bash
 casc-anays/
 │
-├── 🐍 casc_anays.py            # Главный монолит (~8000 строк)
+├── 🐍 casc_anays.py            # Главный монолит (~8300 строк)
 │
 ├── 📦 part1_repos.py           # Ядро: Logger, Config, Utils, Target
 ├── 📦 part2_repos.py           # RepoManager, 40 репозиториев
@@ -587,7 +651,7 @@ casc-anays/
 
 ```bash
 ./build.sh
-# → casc_anays.py (8290 строк)
+# → casc_anays.py (8300+ строк)
 ```
 
 <br>
@@ -792,14 +856,14 @@ git push origin feature/amazing
 
 <div align="center">
 
-Особая благодарность авторам <b>40 инструментов</b>,<br>
+Особая благодарность авторам <b>40+ инструментов</b>,<br>
 чьи репозитории используются в проекте.
 
 <br><br>
 
 <b>OWASP</b> — за amass<br>
 <b>ProjectDiscovery</b> — за subfinder и nuclei<br>
-<b>Сообществу</b> — за вклад и тестирование
+<b>Сообществу Cascada Project</b> — за поддержку и тестирование
 
 </div>
 
@@ -811,14 +875,17 @@ git push origin feature/amazing
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=200&section=footer&text=Made%20with%20%F0%9F%92%9C%20by%20seismon&fontSize=30&fontColor=A855F7&animation=fadeIn&fontAlignY=70" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=200&section=footer&text=Made%20with%20%F0%9F%92%9C%20by%20Cascada%20Project&fontSize=30&fontColor=A855F7&animation=fadeIn&fontAlignY=70" width="100%"/>
 
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&width=700&lines=Web+Reconnaissance+%7C+OSINT+%7C+Pentest;%E2%AD%90+%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D1%8C+%D0%B7%D0%B2%D0%B5%D0%B7%D0%B4%D1%83%2C+%D0%B5%D1%81%D0%BB%D0%B8+%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%B5%D0%BD!" alt="Footer" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&width=700&lines=%D0%9F%D1%80%D0%B8%D1%81%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D1%8F%D0%B9%D1%81%D1%8F+%D0%BA+Cascada+Project;%E2%AD%90+%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D1%8C+%D0%B7%D0%B2%D0%B5%D0%B7%D0%B4%D1%83%2C+%D0%B5%D1%81%D0%BB%D0%B8+%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%B5%D0%BD!" alt="Footer" />
 
 <br>
 
+<a href="https://t.me/cascadom">
+  <img src="https://img.shields.io/badge/🌊_Cascada_Project-@cascadom-26A5E4?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1A1A2E" alt="Cascada Project">
+</a>
 <a href="https://github.com/seismon">
   <img src="https://img.shields.io/badge/GitHub-seismon-181717?style=for-the-badge&logo=github&labelColor=1A1A2E" alt="GitHub">
 </a>
@@ -832,6 +899,12 @@ git push origin feature/amazing
 
 <br><br>
 
-<code>CASC-ANAYS v4.0</code> &nbsp;•&nbsp; <code>2026</code>
+<code>CASC-ANAYS v4.0</code> &nbsp;•&nbsp; <code>Cascada Project</code> &nbsp;•&nbsp; <code>2026</code>
+
+<br><br>
+
+<a href="https://t.me/cascadom">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=18&duration=2000&pause=500&color=26A5E4&center=true&vCenter=true&width=400&lines=t.me%2Fcascadom;%F0%9F%8C%8A+Cascada+Project" alt="Telegram Link" />
+</a>
 
 </div>
