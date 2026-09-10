@@ -74,15 +74,9 @@
 
 **📢 Telegram-канал:** [@cascadom](https://t.me/cascadom)
 
-</div>
-
-<br>
-
-<div align="center">
+<br><br>
 
 В канале **Cascada Project** вы найдёте:
-
-<br>
 
 ```
 🔥  Инструменты для пентеста и OSINT
@@ -131,6 +125,61 @@
 > *Автор не несёт ответственности за неправомерное использование.*
 
 </div>
+
+<br>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" height="3px" alt="divider">
+
+<br>
+
+<h2 align="center">🏗 Архитектура</h2>
+
+<br>
+
+<div align="center">
+
+```mermaid
+%%{init: {'theme':'dark', 'themeVariables': {'primaryColor':'#6C3CE1', 'primaryTextColor':'#E0E0E0', 'primaryBorderColor':'#A855F7', 'lineColor':'#A855F7', 'fontSize':'14px'}}}%%
+graph TD
+    A[🎯 Target] --> B[CascAnalys Core]
+    
+    B --> C[🔌 Ports]
+    B --> D[🌐 HTTP]
+    B --> E[🌍 DNS]
+    B --> F[🕵 OSINT]
+    B --> G[🌐 Subdomains]
+    B --> H[⚠️ Vuln]
+    B --> I[💥 Stress]
+    
+    C --> J[📄 Reports]
+    D --> J
+    E --> J
+    F --> J
+    G --> J
+    H --> J
+    I --> J
+    
+    J --> K[HTML]
+    J --> L[JSON]
+    J --> M[CSV]
+    J --> N[MD]
+    
+    style A fill:#6C3CE1,stroke:#A855F7,color:#fff
+    style B fill:#7C3AED,stroke:#A855F7,color:#fff
+    style J fill:#8B5CF6,stroke:#A855F7,color:#fff
+    style K fill:#9333EA,stroke:#A855F7,color:#fff
+    style L fill:#9333EA,stroke:#A855F7,color:#fff
+    style M fill:#9333EA,stroke:#A855F7,color:#fff
+    style N fill:#9333EA,stroke:#A855F7,color:#fff
+```
+
+</div>
+
+<br>
+
+<p align="center">
+  <b>Поток данных:</b> Target → CascAnalys Core → 7 модулей анализа → Reports (4 формата)
+</p>
 
 <br>
 
@@ -317,10 +366,10 @@ DNS-брутфорс                        →  100+ популярных им�
 CVE            →  NVD API (онлайн) + offline-база
                   nginx · apache · openssh · php · wordpress · openssl · iis
 Nikto          →  Web server scanner (реальный запуск)
-SQL Injection  →  Error-based, 22 сигнатуры СУБД
+SQL Injection  →  Error-based, 13 payload'ов, 22 сигнатуры СУБД
                   MySQL · PostgreSQL · MSSQL · Oracle · SQLite
 XSS            →  Reflected, 12 payload'ов, уникальный маркер
-LFI            →  Path traversal · null-byte · php://filter
+LFI            →  Path traversal · null-byte · php://filter, 13 payload'ов
 ```
 
 <div align="center">
@@ -360,6 +409,78 @@ python3 casc_anays.py -t example.com --full --no-vuln
 
 <br>
 
+<h2 align="center">⚖️ Сравнение с альтернативами</h2>
+
+<br>
+
+<p align="center">
+  <i>CASC-ANAYS — это <b>комбайн для первичной разведки</b>,<br>
+  а не замена специализированным инструментам</i>
+</p>
+
+<br>
+
+<div align="center">
+
+```mermaid
+%%{init: {'theme':'dark', 'themeVariables': {'primaryColor':'#6C3CE1', 'primaryTextColor':'#E0E0E0', 'primaryBorderColor':'#A855F7', 'lineColor':'#A855F7'}}}%%
+xychart-beta
+    title "Покрытие возможностей (0-5)"
+    x-axis [Ports, HTTP, DNS, OSINT, Subs, CVE, SQLi, XSS, LFI, Stress]
+    y-axis "Уровень" 0 --> 5
+    line "CASC-ANAYS" [5, 5, 5, 5, 5, 3, 3, 3, 3, 5]
+    line "Nuclei" [0, 2, 0, 0, 2, 5, 4, 4, 4, 0]
+    line "SQLMap" [0, 0, 0, 0, 0, 0, 5, 0, 0, 0]
+    line "ZAP" [2, 5, 2, 1, 2, 4, 4, 4, 4, 0]
+```
+
+</div>
+
+<br>
+
+<div align="center">
+
+**CASC-ANAYS** выигрывает в **широте охвата** — 7 модулей в одном CLI,<br>
+включая уникальные для подобных тулзов **порт-сканер**, **DNS-анализ**, **WHOIS** и **стресс-тесты**.
+
+**Nuclei** — лидер по **CVE-шаблонам** (тысячи готовых проверок).<br>
+**SQLMap** — незаменим для **глубокой эксплуатации SQLi**.<br>
+**OWASP ZAP** — лучший выбор для **ручного тестирования с GUI**.
+
+</div>
+
+<br>
+
+<div align="center">
+
+### 🎯 Когда что использовать
+
+```
+🐉 CASC-ANAYS  →  Быстрая первичная разведка, единый CLI, 7 модулей
+🔬 Nuclei      →  Глубокий поиск CVE по шаблонам
+💉 SQLMap      →  Глубокая эксплуатация SQL-инъекций
+🛡 OWASP ZAP   →  Ручное тестирование с GUI и прокси
+```
+
+</div>
+
+<br>
+
+<div align="center">
+
+> **Вывод:** CASC-ANAYS — это **комбайн для первичной разведки**.<br>
+> Он **не заменяет** специализированные тулзы (Nuclei, SQLMap, ZAP),<br>
+> а **объединяет** их в один CLI. Используйте CASC-ANAYS для быстрого сбора<br>
+> данных о цели, потом — целевые тулзы для глубокого анализа.
+
+</div>
+
+<br>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" height="3px" alt="divider">
+
+<br>
+
 <h2 align="center">📦 40+ GitHub-репозиториев</h2>
 
 <br>
@@ -373,40 +494,40 @@ python3 casc_anays.py -t example.com --full --no-vuln
 
 <div align="center">
 
-### 🕵 OSINT
+**🕵 OSINT (12)** — поиск по 3000+ соцсетям, email, телефонам, Instagram, Google-аккаунтам
 
 ```
 sherlock · whatsmyname · maigret · theharvester · spiderfoot · ghunt
 photon · osintgram · h8mail · holehe · trape · torbot
 ```
 
-### 🌐 Поддомены
+**🌐 Поддомены (9)** — 5 источников + DNS-брутфорс
 
 ```
 sublist3r · amass · subfinder · findomain · subcat
 subdomain-enumerator · subdomain-enum-tool · dnsrecon · certinfo
 ```
 
-### ⚠️ Уязвимости
+**⚠️ Уязвимости (12)** — web-сканеры, CMS, секреты в git
 
 ```
 nikto · nuclei · web-vuln-scanner · wpscan · joomscan · cmsmap
 cmseek · cms-vuln-scanner · jaeles · gitleaks · trufflehog · wordpress-plugins
 ```
 
-### 💥 Стресс
+**💥 Стресс (4)** — Slowloris, HTTP-флуд, L7 DDoS
 
 ```
 floodles · ddos-attack · slowloris · goldeneye
 ```
 
-### 📚 Словари
+**📚 Словари (2)** — SecLists (~1.5GB) и FuzzDB
 
 ```
-seclists (~1.5GB, тяжёлый) · fuzzdb
+seclists · fuzzdb
 ```
 
-### 🔧 Вспомогательные
+**🔧 Вспомогательные (1)** — поиск реального IP за CDN
 
 ```
 behindthecdn
@@ -464,48 +585,29 @@ python3 casc_anays.py --clean-repos                   # Удалить всё
 💥 Стресс-тесты
 ```
 
-<div align="center">
-
-### 📋 JSON &nbsp;—&nbsp; полная структура
-
-</div>
-
-```json
-{
-  "meta": {
-    "generator": "CASC-ANAYS",
-    "version": "4.0.0",
-    "timestamp": "2026-01-01T12:00:00",
-    "author": "seismon"
-  },
-  "results": { "...": "..." }
-}
-```
+<br>
 
 <div align="center">
 
-### 📊 CSV &nbsp;—&nbsp; плоская таблица
+### 📸 Пример отчёта
+
+👉 [**Открыть живой HTML-отчёт**](examples/report_dvwa.html) *(сканирование DVWA)*
 
 </div>
 
-```csv
-Target,IP,Type,Name,Severity,Description,URL,Param,CVE
-example.com,1.2.3.4,sqli,SQL Injection,high,Параметр id уязвим,...,id
-```
+<br>
 
 <div align="center">
 
-### 📝 Markdown &nbsp;—&nbsp; для GitHub
+### Другие форматы
 
 </div>
 
-```markdown
-# CASC-ANAYS — Отчёт
-## example.com
-### Порты
-- 80 — http
-- 443 — https
-```
+**📋 JSON** — полная структура с метаданными (generator, version, timestamp, author) и всеми результатами. Идеален для интеграции с другими инструментами и автоматизации.
+
+**📊 CSV** — плоская таблица уязвимостей с колонками `Target, IP, Type, Name, Severity, Description, URL, Param, CVE, Evidence`. Открывается в Excel / Google Sheets.
+
+**📝 Markdown** — для GitHub-README, issue-трекеров или документации. Содержит те же секции, что HTML, но в текстовом формате.
 
 <br>
 
@@ -560,6 +662,50 @@ python3 casc_anays.py -i
 ```
 
 </div>
+
+<br>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" height="3px" alt="divider">
+
+<br>
+
+<h2 align="center">📈 Бенчмарки</h2>
+
+<br>
+
+<p align="center">
+  <b>Тестовая среда:</b> Kali Linux · Python 3.11 · Intel i7 · 16 GB RAM
+</p>
+
+<br>
+
+<div align="center">
+
+**Сканирование портов (TCP)** — около **430 портов/сек** (timeout 0.5s, 100 воркеров)
+
+**DNS-брутфорс поддоменов** — около **8 имён/сек** (по встроенному словарю 100+ имён)
+
+**Количество payload'ов:**
+- SQLi — **13** (error-based, 22 сигнатуры СУБД)
+- XSS — **12** (reflected, уникальный маркер)
+- LFI — **13** (path traversal, null-byte, wrappers)
+
+**Тайминги анализа:**
+- Быстрая разведка (ports+http+dns) — **30–60 сек**
+- Умный режим — **1–3 мин**
+- Полный анализ (все 7 модулей) — **5–15 мин**
+
+</div>
+
+<br>
+
+<div align="center">
+<b>Воспроизвести:</b>
+</div>
+
+```bash
+python3 benchmarks/bench.py
+```
 
 <br>
 
@@ -632,6 +778,19 @@ casc-anays/
 ├── 📦 part5_integration.py     # Главный класс CascAnalys
 ├── 📦 part6_reports.py         # HTML/JSON/CSV/MD + Interactive
 ├── 📦 part7_cli.py             # CLI, тесты, main()
+│
+├── 📂 examples/                # Готовые примеры отчётов
+│   ├── report_dvwa.html
+│   ├── report_dvwa.json
+│   ├── report_dvwa.csv
+│   ├── report_dvwa.md
+│   └── README.md
+│
+├── 📂 benchmarks/              # Бенчмарки
+│   └── bench.py
+│
+├── 📂 docs/                    # Документация и медиа
+│   └── architecture.md
 │
 ├── 🔧 build.sh                 # Сборка монолита
 ├── ⚙️  config.json              # Конфигурация
@@ -763,11 +922,7 @@ python3 casc_anays.py --init-repos --list-repos
 
 <b>CASC-ANAYS</b> создан для <b>легального</b> тестирования на проникновение и аудита безопасности.
 
-</div>
-
-<br>
-
-<div align="center">
+<br><br>
 
 ### ✅ РАЗРЕШЕНО
 
@@ -787,11 +942,7 @@ CTF-задачи
 Нарушать законы вашей страны
 ```
 
-</div>
-
 <br>
-
-<div align="center">
 
 **Автор не несёт ответственности за неправомерное использование.**
 
