@@ -395,9 +395,7 @@ class RepoManager:
     PARALLEL_WORKERS = 4         # одновременно клонируемых репо
 
     # Репозитории, которые НЕ клонируем без явного запроса (слишком тяжёлые)
-    HEAVY_REPOS = {"seclists", "spid
-
-erfoot", "nuclei", "trufflehog", "amass"}
+    HEAVY_REPOS = {"seclists", "spiderfoot", "nuclei", "trufflehog", "amass"}
 
     def __init__(self, config: "Config", logger: "Logger",
                  base_dir: Optional[Path] = None):
